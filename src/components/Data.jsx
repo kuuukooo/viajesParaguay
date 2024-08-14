@@ -15,8 +15,8 @@ export default [
         title: "Salto Cristal",
         location: "LA COLMENA",
         googleMapsUrl: "https://maps.app.goo.gl/Dr2h4wWcmiJmGYNx9",
-        startDate: "12 Jan, 2021",
-        endDate: "24 Jan, 2021",
+        startDate: "12 Ene, 2024",
+        endDate: "24 Ene, 2024",
         description: "Salto Cristal, ubicado en Borja - La Colmena, es una impresionante cascada que cae desde 45 metros de altura. Rodeado de un exuberante bosque, este lugar es perfecto para los amantes de la naturaleza y el senderismo, ofreciendo vistas espectaculares y una refrescante experiencia.",
         imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/32/58/a9/img-20160121-165322-01.jpg?w=800&h=-1&s=1",
         paginaUrl: "https://www.tripadvisor.es/Attraction_Review-g2108618-d8565876-Reviews-Salto_Cristal-Paraguari_Paraguari_Department.html"

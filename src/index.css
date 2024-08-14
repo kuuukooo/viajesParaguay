@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --navbar: #F55A5A;
+  --navbarTexto: #FFFFFF;
+  --textoMaps: #918E9B; 
+  --highlightColor: #F55A5A;
+  --footerFondo: #2c2c2c;
+  --footerTexto: #e2e2e0;
+  --footerLink: #497439;
+  --footerLinkHover: #345826;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+  }
+
+nav {
+  background-color: var(--navbar);
+  height: 3.438rem;
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+  
+
+.nav--titulo {
+  color: var(--navbarTexto);
+  font-weight: 500;
+  font-size: 0.898rem;
+  letter-spacing: -0.075em;
+  margin-left: 0.438rem;
+}
+
+nav .banderaParaguay {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.338rem;
+  margin-top: 0.1rem;
+}
+
+.cards--contenedor {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: center; 
+  max-width: 34.875rem;
+}
+
+.card--imagen {
+  width: 15.413rem;
+  height: 14.5rem;
+  border-radius: 5px;
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  object-fit: cover;
+}
+
+.card--imagen--link:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.card--text {
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+}
+
+.card--stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px; /* Espacio entre stats y el título */
+  align-items: center;
+}
+
+.card--stats--icon {
+  width: 0.438rem;
+  height: 0.597rem;
+  margin-right: 5px; /* Espacio entre el icono y la ubicación */
+}
+
+.card--stats--location{
+  font-size: 10.24px;
+  font-weight: 400;
+  letter-spacing: 0.17em;
+  text-align: left;
+}
+
+.card--stats--maps {
+  margin-left: 0.75rem;
+  font-size: 10.24px;
+  font-weight: 400;
+  line-height: 12.39px;
+  text-align: left;
+}
+
+.card--stats--maps a {
+  color: var(--textoMaps);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.card--stats--maps a:hover {
+  color: var(--highlightColor); 
+}
+
+.card--stats--maps a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--highlightColor);
+  transition: width 0.3s ease-in-out;
+}
+
+.card--stats--maps a:hover::after {
+  width: 100%;
+}
+
+
+.card--title {
+  margin-bottom: 0.625rem; /* Espacio entre el título y la fecha */
+}
+
+.card--date {
+  font-size: 10.24px;
+  font-weight: 700;
+  line-height: 12.39px;
+  text-align: left;
+  margin-bottom: 0.625rem; /* Espacio entre la fecha y la descripción */
+}
+
+.card--description {
+  font-size: 10.24px;
+  font-weight: 400;
+  line-height: 15.36px;
+  text-align: left;
+  width: 100%;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: var(--footerFondo); 
+  color: var(--footerTexto);
+  text-align: center;
+  font-size: 12px; 
+  padding: 10px 0;
+  z-index: 100;
+}
+
+footer a {
+  color: #497439; 
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #345826; 
+}
+
+
+@media only screen and (max-width: 768px) {
+  .cards--contenedor {
+    padding: 20px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .card--imagen {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .card--stats--icon {
+    width: 0.375rem;
+    height: 0.512rem;
+  }
+
+  .card--stats--location,
+  .card--stats--maps {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .card--title {
+    margin-bottom: 0.5rem;
+  }
+
+  .card--date,
+  .card--description {
+    font-size: 9px;
+    line-height: 11px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cards--contenedor {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card--stats--icon {
+    width: 0.3rem;
+    height: 0.4rem;
+  }
+
+  .card--stats--location,
+  .card--stats--maps {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .card--title {
+    margin-bottom: 0.4rem;
+  }
+
+  .card--date,
+  .card--description {
+    font-size: 8px;
+    line-height: 10px;
+    margin-bottom: 0.4rem;
+  }
+}
